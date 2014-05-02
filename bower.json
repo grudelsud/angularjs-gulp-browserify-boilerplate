@@ -1,0 +1,23 @@
+{
+  "name": "angularjs-gulp-browserify-boilerplate",
+  "version": "0.0.0",
+  "authors": [
+    "grudelsud"
+  ],
+  "description": "I guess you can read the description from package.json",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "tom.londondroids.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16"
+  }
+}
