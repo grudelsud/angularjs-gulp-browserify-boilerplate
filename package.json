@@ -16,6 +16,9 @@
     "url": "https://github.com/grudelsud/angular-gulp-browserify-boilerplate/issues"
   },
   "homepage": "https://github.com/grudelsud/angular-gulp-browserify-boilerplate",
+  "scripts": {
+    "postinstall": "bower install"
+  },
   "devDependencies": {
     "gulp": "^3.8.6",
     "browserify": "^5.9.1",
