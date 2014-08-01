@@ -1,7 +1,7 @@
 var WelcomeCtrl = function($scope) {
 	console.log('welcome controller');
-	$scope.greetings = 'Hey!'
+	$scope.greetings = 'Hey!';
 };
 
-var module = require('./_module_init.js');
-module.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
+var ngModule = require('./_module_init.js');
+ngModule.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);

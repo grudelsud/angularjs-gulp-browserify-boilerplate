@@ -1,0 +1,12 @@
+{
+  "undef": true,
+  "unused": "vars",
+  "devel": true,
+  "browser": true,
+  "globals": {
+    "angular": false,
+    "require": false,
+    "module": false,
+    "exports": false
+  }
+}

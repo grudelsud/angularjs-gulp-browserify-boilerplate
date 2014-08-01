@@ -1,6 +1,6 @@
 {
   "name": "angularjs-gulp-browserify-boilerplate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "just a simple boilerplate with multiple angular modules",
   "main": "app.js",
   "scripts": {
@@ -16,8 +16,13 @@
     "url": "https://github.com/grudelsud/angular-gulp-browserify-boilerplate/issues"
   },
   "homepage": "https://github.com/grudelsud/angular-gulp-browserify-boilerplate",
+  "scripts": {
+    "postinstall": "bower install"
+  },
   "devDependencies": {
-    "gulp": "^3.6.2",
-    "gulp-browserify": "^0.5.0"
+    "gulp": "^3.8.6",
+    "browserify": "^5.9.1",
+    "vinyl-source-stream": "^0.1.1",
+    "gulp-jshint": "^1.8.3"
   }
 }
