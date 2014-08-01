@@ -8,7 +8,7 @@ angular.element(document).ready(function() {
 		'boilerplate.controllers'
 	];
 
-	var app = angular.module('boilerplate', requires);
+	angular.module('boilerplate', requires);
 
 	angular.bootstrap(document, ['boilerplate']);
 
