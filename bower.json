@@ -1,6 +1,6 @@
 {
   "name": "angularjs-gulp-browserify-boilerplate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
     "grudelsud"
   ],
@@ -18,6 +18,6 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.16"
+    "angular": "~1.2.21"
   }
 }
