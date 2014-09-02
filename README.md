@@ -17,4 +17,4 @@ all functions defined for the angular module are importing the module itself usi
 
 # Caveats
 
-there are a lot of things that I don't like in this boilerplate, but I think its main caveat is that using `scripts/main/app.js` as a single source in browserify does not let gulp execute lint/shim on singular js files. If anyone comes with a clever (and simple) solution to fix it, more than welcomed!
+This app is just a simple boilerplate for an angularjs app compiled with gulp+browserify. If anyone comes with clever (and simple) suggestions to improve it, more than welcomed!
