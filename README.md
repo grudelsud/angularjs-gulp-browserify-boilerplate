@@ -16,20 +16,23 @@ I've read quite a few blog posts, tutorials, etc. and eventually - based on what
 Components are defined through an `index.js` file, automagically recognized by browserify as the main entry point for the specific module. A component definition is hence made through 3 main steps:
 
 1. creating the angular module and exporting it from `index.js`, e.g.
-		// init module and export
-		module.exports = angular.module('components.welcome', []);
+
+        // init module and export
+        module.exports = angular.module('components.welcome', []);
 2. requiring all the elements needed for the module from `index.js`, e.g.
-		// require here all the components imported by this module:
-		require('./welcome.js');
+
+        // require here all the components imported by this module:
+        require('./welcome.js');
 3. from the element itself, attach the angular service/directive/etc. by requiring the component export and attaching definitions, e.g.
-		// require the angular module defined by this component
-		var ngModule = require('./');
-		// attach the directive/service/controller defined by this component
-		ngModule.directive('welcomeMsg', [WelcomeMsg]);
+
+        // require the angular module defined by this component
+        var ngModule = require('./');
+        // attach the directive/service/controller defined by this component
+        ngModule.directive('welcomeMsg', [WelcomeMsg]);
 
 the whole component is then required by the main app and injected into its dependencies, e.g.:
-	// require list of components
-	require('./components/welcome');
+    // require list of components
+    require('./components/welcome');
 
 this way, adding additional components is as simple as dropping a new directory containing all the required scripts and importing it into the main app. Or, on the other hand, deleting a component only requires to delete its specific require and dependency injection.
 
