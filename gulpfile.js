@@ -1,30 +1,39 @@
 'use strict';
 
 // dependencies
-var gulp        = require('gulp');
+var gulp         = require('gulp');
+var jshint       = require('gulp-jshint');
+var browserify   = require('browserify');
+var source       = require('vinyl-source-stream');
 
 var isProduction = false;
 
+var paths = {
+  scriptEntryFiles: ['./scripts/app.js'],
+  scriptSrcFiles:   './scripts/**/*.js',
+  scriptDstDir:     './build'
+};
+
 gulp.task('lint', function () {
-  var jshint = require('gulp-jshint');
-  return gulp.src('scripts/**/*.js')
+  return gulp.src(paths.scriptSrcFiles)
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
 });
 
 // scripts task
 gulp.task('scripts', ['lint'], function() {
-  var browserify = require('browserify');
-  var source = require('vinyl-source-stream');
   var b = browserify({
-    basedir: '.',
-    entries: './scripts/main/app.js',
+    entries: paths.scriptEntryFiles,
     debug: !isProduction,
-    insertGlobals: true
   });
+
   b.bundle()
-    .pipe(source('app.js'))
-    .pipe(gulp.dest('build'))
+    .pipe(source('bundle.js'))
+    .pipe(gulp.dest(paths.scriptDstDir))
+});
+
+gulp.task('watch', function() {
+    gulp.watch(paths.scriptSrcFiles, ['scripts']);
 });
 
 gulp.task('default', ['scripts']);
