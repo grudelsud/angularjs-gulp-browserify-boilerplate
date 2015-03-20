@@ -13,7 +13,9 @@ I've read quite a few blog posts, tutorials, etc. and eventually - based on what
 
 [App.js](scripts/app.js) defines an angular app and **requires** all the external componentes, injecting them as requirements in the main app. 
 
-Components are defined through an `index.js` file, automagically recognized by browserify as the main entry point for the specific module. A component definition is hence made through 3 main steps:
+Components are defined through an `index.js` file, automagically recognized by browserify as the main entry point for the specific module. 
+
+A component definition is hence made through 3 main steps:
 
 1. creating the angular module and exporting it from `index.js`, e.g.
 
@@ -31,6 +33,7 @@ Components are defined through an `index.js` file, automagically recognized by b
         ngModule.directive('welcomeMsg', [WelcomeMsg]);
 
 the whole component is then required by the main app and injected into its dependencies, e.g.:
+
     // require list of components
     require('./components/welcome');
 
